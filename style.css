@@ -7,13 +7,15 @@
     height: 200px;
     border: 1px solid black;
 }
-#character{
+#character {
     width: 20px;
     height: 50px;
     background-color: red;
     position: relative;
     top: 150px;
-    animation: jump 500ms infinite;
+}
+    .animate{
+    animation: jump 500ms;
 }
 @keyframes jump {
     0%{top: 150px;}
