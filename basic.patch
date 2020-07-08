@@ -1,0 +1,129 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1594124358139)
++++ .idea/vcs.xml	(date 1594124358139)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- index.html	(revision e6715971e65cb4ed5dedb7e37e205558f00e141d)
++++ index.html	(date 1594191263073)
+@@ -1,87 +1,23 @@
+-/*   This is the base file for the Sokoban assignment - include this one in your HTML page, before you add the main script file*/
+-
+-​
+-
+-/*   Enum of CSS Classes for the static elements   */
+-
+-var Tiles = {
+-
+-Wall: "tile-wall",
+-
+-Space: "tile-space",
+-
+-Goal: "tile-goal"
++<!doctype html>
+ 
+-};
++<html lang="en">
++<head>
++    <meta charset="utf-8">
+ 
+-​
++    <title>Sokoban Game by Mark Andersson</title>
++    <meta name="description" content="Sokoban Game">
++    <meta name="author" content="SitePoint">
+ 
+-/*   Enum of CSS Classes for the moving elements   */
++    <link rel="stylesheet" href="styles.css?v=1.0">
+ 
+-var Entities = {
++</head>
+ 
+-Character: "entity-player",
+-
+-Block: "entity-block",
+-
+-BlockDone: "entity-block-goal"
+-
+-};
+-
+-​
+-
+-/*  Legend
+-
+-W = Wall
+-
+-B = Movable block
+-
+-P = Player starting position
+-
+-G = Goal area for the blocks
+-
+-*/
+-
+-var tileMap01 = {
+-
+-width: 19,
+-
+-height: 16,
+-
+-mapGrid: [
+-
+-[[' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']],
+-
+-[[' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']],
+-
+-[[' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']],
+-
+-[[' '], [' '], [' '], [' '], ['W'], ['W'], ['W'], ['W'], ['W'], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']],
+-
+-[[' '], [' '], [' '], [' '], ['W'], [' '], [' '], [' '], ['W'], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']],
+-
+-[[' '], [' '], [' '], [' '], ['W'], ['B'], [' '], [' '], ['W'], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']],
+-
+-[[' '], [' '], ['W'], ['W'], ['W'], [' '], [' '], ['B'], ['W'], ['W'], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']],
+-
+-[[' '], [' '], ['W'], [' '], [' '], ['B'], [' '], ['B'], [' '], ['W'], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']],
+-
+-[['W'], ['W'], ['W'], [' '], ['W'], [' '], ['W'], ['W'], [' '], ['W'], [' '], [' '], [' '], ['W'], ['W'], ['W'], ['W'], ['W'], ['W']],
+-
+-[['W'], [' '], [' '], [' '], ['W'], [' '], ['W'], ['W'], [' '], ['W'], ['W'], ['W'], ['W'], ['W'], [' '], [' '], ['G'], ['G'], ['W']],
+-
+-[['W'], [' '], ['B'], [' '], [' '], ['B'], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], ['G'], ['G'], ['W']],
+-
+-[['W'], ['W'], ['W'], ['W'], ['W'], [' '], ['W'], ['W'], ['W'], [' '], ['W'], ['P'], ['W'], ['W'], [' '], [' '], ['G'], ['G'], ['W']],
+-
+-[[' '], [' '], [' '], [' '], ['W'], [' '], [' '], [' '], [' '], [' '], ['W'], ['W'], ['W'], ['W'], ['W'], ['W'], ['W'], ['W'], ['W']],
+-
+-[[' '], [' '], [' '], [' '], ['W'], ['W'], ['W'], ['W'], ['W'], ['W'], ['W'], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']],
+-
+-[[' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']],
+-
+-[[' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' '], [' ']]
+-
+-]
++<body>
++<div id="game">
++    <div id="character"></div>
++    <div id="block"></div>
++</div>
++</body>
++<script src="scripts.js"></script>
+ 
+-};
+\ No newline at end of file
++</html>
+\ No newline at end of file
